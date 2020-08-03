@@ -1,0 +1,64 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Mini Game</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="intro">
+      <h1>RANDOM NUMBER GAME</h1>
+      <p>랜덤 숫자 맞히기 게임에 오신 것을 환영합니다.<br>
+        아래의 버튼을 눌러 게임설명을 보거나 새게임을 시작할 수 있습니다.
+      </p>
+    </div>
+    <div class="button-list">
+      <button class="start-btn">새게임</button>
+      <button class="menual-btn">게임설명</button>
+    </div>
+    <div class="game-menual">
+      <h2>게임설명</h2>
+      <ol class="menual-list">
+        <li>1. 새게임 버튼을 누르면 랜덤으로 숫자가 생성됩니다.</li>
+        <li>2. 플레이어는 그 숫자가 몇인지 정확히 맞혀야합니다.</li>
+        <li>3. 생명은 총 5개가 주어지며, 오답을 제출 시에 하나씩 소모됩니다.</li>
+        <li>4. 정답을 맞히면 게임에서 승리합니다.</li>
+        <li>5. 모든 생명을 소모 시에는 게임에서 패배하며 정답이 공개됩니다.</li>
+      </ol>
+      <button class="exit">닫기</button>
+    </div>
+    <div class="game-table">
+      <ul class="life-list">
+        <li class="life">생명1</li>
+        <li class="life">생명2</li>
+        <li class="life">생명3</li>
+        <li class="life">생명4</li>
+        <li class="life">생명5</li>
+      </ul>
+      <div class="hint-list">
+        <p class="number-type">나는 <span>홀수</span>입니다.</p>
+        <p class="number-floor">나는 <span class="small">0</span>보다 크고, <span class="large">100</span>보다 작습니다.</p>
+      </div>
+      <form action="#" name="number-frm" class="number-frm">
+        <label for="number">내 생각에는 <input type="number" id="number" maxlength="2" />이(가) 정답일 것 같아!</label>
+        <button class="submit">확인</button>
+      </form>
+      <div class="game-message">
+        <p class="number-open show">정답은 <span class="number-true"></span>입니다.</p>
+        <p class="win">게임에서 승리했습니다!</p>
+        <p class="lose">게임에서 패배했습니다!</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
